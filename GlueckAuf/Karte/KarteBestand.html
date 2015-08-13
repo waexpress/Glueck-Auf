@@ -1,0 +1,81 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jQuery Mobile-Webanwendung</title>
+
+<link href="jquery.mobile-1.0a3.min.css" rel="stylesheet" type="text/css"/>
+
+<script src="jquery-1.5.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0a3.min.js" type="text/javascript"></script>
+
+<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUXlgu3sYt980IOQRDJj1gQOQzGypgNq8&sensor=false">
+    </script>
+
+<style type="text/css">
+  html { height: 100% }
+  body { height: 100%; margin: 0; padding: 0 }
+  #map { height: 100% }
+</style>
+
+
+</head> 
+
+
+
+
+
+<body> 
+
+<div data-role="page" id="page">
+	<div data-role="header">
+<a data-role="button" a href="#" data-rel="back" data-direction="reverse">Back</a>
+  <a href="../index.html" rel="external">Home</a>
+<h1>&nbsp;</h1></div>
+		
+		
+        <div id="map" style="width: 100%;"></div>
+
+  <script type="text/javascript">
+    var locations = [
+      ['Östertal', 51.368405, 10.892258, 4],
+      ['Hasenholz', 51.370347, 10.889060, 5],
+      ['Wippertor', 51.371178, 10.876465, 3],
+	  ['Borntal', 51.362523, 10.879490, 2],
+	  ['Stadtmitte', 51.368070, 10.862346, 1],
+	  ['Franzberg', 51.369322, 10.851434, 6],
+	  ['Großfurra', 51.397425, 10.800269, 7],
+	  ['Göllingen', 51.339822, 11.011949, 8]
+    ];
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 10,
+      center: new google.maps.LatLng(51.35, 10.90),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < locations.length; i++) {  
+      marker = new google.maps.Marker({
+        position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+        map: map
+      });
+
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+    }
+  </script>
+
+</div>
+
+
+</body>
+</html>
