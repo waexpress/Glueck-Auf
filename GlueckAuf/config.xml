@@ -12,7 +12,7 @@ Mit dieser App haben Sie Zugriff auf Kontakte, Services, Ansprechpartner und wei
     </description>
 
     <author href="http://www.wa-express.de" email="kontakt@wa-express.de">
-        WA Express
+        Weimann/Schmidt GbR
     </author>
 
     <feature name="http://api.phonegap.com/1.0/device" />
@@ -28,7 +28,7 @@ Mit dieser App haben Sie Zugriff auf Kontakte, Services, Ansprechpartner und wei
     <icon src="icons/57.png"            gap:platform="ios"        width="57" height="57" />
     <icon src="icons/72.png"            gap:platform="ios"        width="72" height="72" />
     <icon src="icons/114.png"         gap:platform="ios"        width="114" height="114" />
-    <icon src="icons/144.png"         gap:platform="ios"        width="144" height="144" />
+	<icon src="icons/144.png"         gap:platform="ios"        width="144" height="144" />
 	
 	<gap:splash src="icons/320_480.png" width="320" height="480" />
 	<gap:splash src="icons/640_960.png" width="640" height="960" />
