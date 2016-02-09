@@ -40,8 +40,8 @@ Mit dieser App haben Sie Zugriff auf Kontakte, Services, Ansprechpartner und wei
     <gap:splash src="icons/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 	
 	<access origin="*" browserOnly="true"/>
-	<plugin name="cordova-plugin-geolocation"    source="npm" spec="1.0.1" />
-    <plugin name="cordova-plugin-inappbrowser"   source="npm" spec="1.0.1" />
+	<plugin name="cordova-plugin-geolocation"    source="npm" />
+    <plugin name="cordova-plugin-inappbrowser"   source="npm" />
 	<gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="false"> 
 <array> 
 <string>Allow GPS</string> 
